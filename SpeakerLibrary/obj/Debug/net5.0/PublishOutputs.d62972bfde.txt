@@ -1,0 +1,3 @@
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/dist/SpeakerLibrary.dll
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/dist/SpeakerLibrary.deps.json
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/dist/SpeakerLibrary.pdb

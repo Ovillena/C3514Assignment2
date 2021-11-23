@@ -1,0 +1,83 @@
+@page "/editspeaker/{speakerid}"
+@inject HttpClient httpClient
+@inject NavigationManager UriHelper
+
+<h1>Edit Speaker</h1>
+<button class="btn btn-success btn-sm" @onclick=@Navigate>Back</button>
+
+<EditForm Model="@speaker" OnValidSubmit="@HandleUpdate">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText placeholder="First Name" id="firstName" @bind-Value="@speaker.FirstName" />
+    <br />
+    <InputText placeholder="Last Name" id="lastName" @bind-Value="@speaker.LastName" />
+    <br />
+    <InputText placeholder="Email" id="Email" @bind-Value="@speaker.Email" />
+    <br />
+    <InputText placeholder="Mobile Number" id="MobileNumber" @bind-Value="@speaker.MobileNumber" />
+    <br />
+    <InputText placeholder="Area of Specialization" id="Specialization" @bind-Value="@speaker.Specialization" />
+    <br />
+    <InputText placeholder="City of Residence" id="City" @bind-Value="@speaker.City" />
+    <br />
+    <InputText placeholder="Province of Residence" id="Province" @bind-Value="@speaker.Province" />
+    <br />
+    <InputText placeholder="Employer" id="Employer" @bind-Value="@speaker.Employer" />
+    <br />
+    <button type="submit" class="btn btn-success">Submit</button>
+
+    @code {
+        private async void HandleUpdate()
+        {
+            string endpoint = $"{baseUrl}api/speakers/{speaker.SpeakerId}";
+
+            await httpClient.PutAsJsonAsync(endpoint, speaker);
+
+            await load();
+            StateHasChanged(); // causes the page to get automatically refreshed
+            Navigate(); //goes back to home page
+
+        }
+    }
+</EditForm>
+
+
+@code {
+    Speaker s;
+    [Parameter]
+    public string SpeakerId { get; set; }
+    private Speaker speaker = new Speaker();
+
+    Speaker[] speakers;
+    string baseUrl = "https://localhost:6001/";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ShowEdit(SpeakerId);
+    }
+
+    protected async Task load()
+    {
+        speakers = await httpClient.GetFromJsonAsync<Speaker[]>($"{baseUrl}api/speakers");
+    }
+
+    protected async Task ShowEdit(string id)
+    {
+        s = await httpClient.GetFromJsonAsync<Speaker>($"{baseUrl}api/speakers/{id}");
+        speaker.SpeakerId = s.SpeakerId;
+        speaker.FirstName = s.FirstName;
+        speaker.LastName = s.LastName;
+        speaker.Email = s.Email;
+        speaker.MobileNumber = s.MobileNumber;
+        speaker.Specialization = s.Specialization;
+        speaker.City = s.City;
+        speaker.Province = s.Province;
+        speaker.Employer = s.Employer;
+
+    }
+    void Navigate()
+    {
+        UriHelper.NavigateTo("/"); // goes back to home page
+    }
+}

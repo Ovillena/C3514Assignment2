@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{FAB47B79-9D49-4E90-860B-F2E365A4F2C7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorClient/nginx.conf">
+    <Files>
+      <File FileName="BlazorClient/Dockerfile" Line="6" Column="1" />
+      <File FileName="docker-compose.yml" />
+      <File FileName="SpeakerApi/Dockerfile" />
+      <File FileName="BlazorClient/nginx.conf" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assignment2-Octavio-Sean" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="BlazorClient" expanded="True" />
+            <Node name="SpeakerApi" expanded="True" />
+            <Node name="SpeakerLibrary" expanded="True">
+              <Node name="dist" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SpeakerApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

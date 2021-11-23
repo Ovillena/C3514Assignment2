@@ -1,0 +1,50 @@
+﻿version: "3.4"
+services:
+  webapi:
+    build:
+      context: .
+      dockerfile: SpeakerApi/Dockerfile
+    restart: always
+    depends_on:
+        - db
+    ports:
+        - "5000:80"
+        - "5001:443"
+    restart: always
+    environment:
+        - DBHOST=db
+        - DBPORT=1433
+        - DBUSER=sa
+        - DBPASSWORD=SqlExpress!
+        - DBNAME=Speakers
+        - ASPNETCORE_ENVIRONMENT=Development
+  wasm:
+    build:
+      context: .
+      dockerfile: BlazorClient/Dockerfile
+    depends_on:
+      - webapi
+    ports:
+      - 8888:80
+  db:
+    image: mcr.microsoft.com/azure-sql-edge
+
+    volumes:
+      - sqlsystem:/var/opt/mssql/
+      - sqldata:/var/opt/sqlserver/data
+      - sqllog:/var/opt/sqlserver/log
+      - sqlbackup:/var/opt/sqlserver/backup
+
+    ports:
+      - "1433:1433"
+    restart: always
+
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: SqlExpress!
+
+volumes:
+  sqlsystem:
+  sqldata:
+  sqllog:
+  sqlbackup:

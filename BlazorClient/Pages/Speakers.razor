@@ -1,0 +1,41 @@
+﻿@page "/speakers"
+@inject HttpClient httpClient
+@inject NavigationManager UriHelper
+
+<h1>Speakers</h1>
+
+@if (speakers == null)
+{
+<p><em>Loading...</em></p> }
+            else
+            {
+<NavLink href="/addspeaker" class="btn btn-success">Add Speaker</NavLink>
+                <table style="border: 1px solid">
+               
+                    <tbody>
+                        @foreach (var item in speakers)
+                        {
+        <tr style="border: 1px solid">
+            <td style="width: 25rem; padding: 0 1rem 0 1rem;">@item.FirstName @item.LastName</td>
+            <td style="border: 1px solid"><a style="padding: 0 1rem 0 1rem" href="/editspeaker/@item.SpeakerId">Edit</a></td>
+            <td style="border: 1px solid"><a style="padding: 0 1rem 0 1rem" href="/deletespeaker/@item.SpeakerId">Delete</a></td>
+        </tr>}
+                    </tbody>
+                </table>}
+
+
+@code {
+    Speaker s;
+
+    Speaker[] speakers;
+    string baseUrl = "https://localhost:6001/";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await load();
+    }
+
+    protected async Task load()
+    {
+        speakers = await httpClient.GetFromJsonAsync<Speaker[]>($"{baseUrl}api/speakers");
+    } }

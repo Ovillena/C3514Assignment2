@@ -1,0 +1,12 @@
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/bin/Debug/net5.0/SpeakerLibrary.deps.json
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/bin/Debug/net5.0/SpeakerLibrary.dll
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/bin/Debug/net5.0/ref/SpeakerLibrary.dll
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/bin/Debug/net5.0/SpeakerLibrary.pdb
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/SpeakerLibrary.csproj.AssemblyReference.cache
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/SpeakerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/SpeakerLibrary.AssemblyInfoInputs.cache
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/SpeakerLibrary.AssemblyInfo.cs
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/SpeakerLibrary.csproj.CoreCompileInputs.cache
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/SpeakerLibrary.dll
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/ref/SpeakerLibrary.dll
+/Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/SpeakerLibrary/obj/Debug/net5.0/SpeakerLibrary.pdb

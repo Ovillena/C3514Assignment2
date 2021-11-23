@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BlazorClient
+build_property.ProjectDir = /Users/ovillena/Documents/a01207939/term3/COMP3514/Assignment2-Octavio-Sean/BlazorClient/
